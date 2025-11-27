@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Funko Pop Shop | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo"> Funko Pop Shop
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <img src="assets/pops/pop-marvel.jpg" alt="Funko Pops" class="hero-image">
+      <div class="hero-text">
+        <h1>Collect the Pop. Own the Fun.</h1>
+        <p>Discover iconic Funko Pops from movies, anime, cartoons, music and many more - curated for fans and collectors.</p>
+        <a href="shop.html" class="btn">Shop Now</a>
+        <a href="about.html" class="btn alt">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Featured Pops</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="assets/pops/pop-ironman.jpg" alt="Iron Man Pop">
+          <div class="content">
+            <div class="title">Iron Man</div>
+            <div class="meta">Movies</div>
+            <div class="price">₱899</div>
+            <div class="actions">
+              <a href="shop.html" class="btn">View</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/pops/pop-naruto.jpg" alt="Naruto Pop">
+          <div class="content">
+            <div class="title">Naruto Uzumaki</div>
+            <div class="meta">Anime</div>
+            <div class="price">₱799</div>
+            <div class="actions">
+              <a href="shop.html" class="btn">View</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/pops/pop-spongebob.jpg" alt="Spongebob Pop">
+          <div class="content">
+            <div class="title">Spongebob Ripped Pants</div>
+            <div class="meta">Cartoon</div>
+            <div class="price">₱749</div>
+            <div class="actions">
+              <a href="shop.html" class="btn">View</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2025 Funko Pop Shop - All Rights Reserved</div>
+  </footer>
+  <script>
+    const links = document.querySelectorAll('.nav a');
+    links.forEach(a => {
+      if (a.getAttribute('href') === location.pathname.split('/').pop() || (a.getAttribute('href') === 'index.html' && location.pathname.endsWith('/'))) {
+        a.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

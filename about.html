@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Funko Pop Shop | About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo"> Funko Pop Shop
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-image">
+        <img src="assets/pops/pop-logo.jpg" alt="Funko Pop Collection">
+      </div>
+      <div class="hero-text">
+        <h1>Our Story</h1>
+        <p>Funko Pop Shop was built for collectors and fans who want more than just figures - they want culture, nostalgia, and creativity in every box. We bring together iconic Pops from movies, anime, games, and music, all in one place.</p>
+        <a href="shop.html" class="btn">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Why We Exist</h2>
+      <p>We believe collecting should be simple, stylish, and fun. Our shop is designed to highlight the uniqueness of each Pop while keeping the browsing experience clean and easy.</p>
+
+      <h2>Pop Culture Connection</h2>
+      <p>From superheroes to anime legends, Funko Pops capture the characters that inspire us. Every figure tells a story, and our mission is to connect fans with the icons they love.</p>
+
+      <h2>Our Commitment</h2>
+      <p>We curate our collections with care, ensuring authenticity and quality. Whether you’re starting your first shelf or expanding a massive lineup, we’re here to make collecting effortless.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2025 Funko Pop Shop - All Rights Reserved</div>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.nav a');
+    links.forEach(a => {
+      if (a.getAttribute('href') === location.pathname.split('/').pop()) {
+        a.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

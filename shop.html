@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Funko Pop Shop | Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo"> Funko Pop Shop
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-image">
+        <img src="assets/pops/pop-naruto.jpg" alt="Naruto Funko Pop">
+      </div>
+      <div class="hero-text">
+        <h1>Own a Pop</h1>
+        <p>Browse our curated lineup of Funko Pops - from movies and anime to games and music.</p>
+        <a href="#products" class="btn">View All Pops</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <label for="genre-filter"><strong>Filter by Genre:</strong></label>
+      <select id="genre-filter">
+        <option value="all">All</option>
+        <option value="movies">Movies</option>
+        <option value="anime">Anime</option>
+        <option value="cartoon">Cartoons</option>
+        <option value="music">Music</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="container">
+      <h2>All Pops</h2>
+      <div class="grid grid-4">
+        <article class="card" data-genre="movies">
+          <img src="assets/pops/pop-ironman.jpg" alt="Iron Man Pop">
+          <div class="content">
+            <div class="title">Iron Man</div>
+            <div class="meta">Movies</div>
+            <div class="price">₱899</div>
+          </div>
+        </article>
+
+        <article class="card" data-genre="anime">
+          <img src="assets/pops/pop-naruto.jpg" alt="Naruto Pop">
+          <div class="content">
+            <div class="title">Naruto Uzumaki</div>
+            <div class="meta">Anime</div>
+            <div class="price">₱799</div>
+          </div>
+        </article>
+
+        <article class="card" data-genre="cartoon">
+          <img src="assets/pops/pop-spongebob.jpg" alt="Spongebob Pop">
+          <div class="content">
+            <div class="title">Spongebob Ripped Pants</div>
+            <div class="meta">Cartoon</div>
+            <div class="price">₱749</div>
+          </div>
+        </article>
+
+        <article class="card" data-genre="music">
+          <img src="assets/pops/pop-mj.jpg" alt="Michael Jackson Pop">
+          <div class="content">
+            <div class="title">Michael Jackson</div>
+            <div class="meta">Music</div>
+            <div class="price">₱999</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2025 Funko Pop Shop - All Rights Reserved</div>
+  </footer>
+
+  <script>
+    const filter = document.getElementById('genre-filter');
+    const cards = document.querySelectorAll('.card');
+
+    filter.addEventListener('change', () => {
+      const value = filter.value;
+      cards.forEach(card => {
+        if (value === 'all' || card.dataset.genre === value) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Highlight active nav link
+    const links = document.querySelectorAll('.nav a');
+    links.forEach(a => {
+      if (a.getAttribute('href') === location.pathname.split('/').pop()) {
+        a.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Funko Pop Shop | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo"> Funko Pop Shop
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-image">
+        <img src="assets/gallery/display-1.jpg" alt="Funko Pop Display">
+      </div>
+      <div class="hero-text">
+        <h1>Pops in Action</h1>
+        <p>See how collectors style and display their Pops - from shelves and desks to creative setups. Get inspired to showcase your own collection with pride.</p>
+        <a href="#gallery" class="btn">Explore Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2>Collector Displays</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="assets/gallery/display-2.jpg" alt="Display 2">
+          <div class="content">
+            <div class="title">Marvel Shelf</div>
+            <div class="meta">Movies</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/gallery/display-3.jpg" alt="Display 3">
+          <div class="content">
+            <div class="title">Anime Lineup</div>
+            <div class="meta">Anime</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="assets/gallery/display-4.jpg" alt="Display 4">
+          <div class="content">
+            <div class="title">MHA pop</div>
+            <div class="meta">Anime</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2025 Funko Pop Shop - All Rights Reserved</div>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.nav a');
+    links.forEach(a => {
+      if (a.getAttribute('href') === location.pathname.split('/').pop()) {
+        a.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
